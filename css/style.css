@@ -1,0 +1,174 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: Arial, sans-serif;
+ }
+ 
+ input:-webkit-autofill,
+ input:-webkit-autofill:focus {
+   transition: background-color 600000s 0s, color 600000s 0s;
+ }
+ input[data-autocompleted] {
+   background-color: transparent !important;
+ }
+ 
+ body {
+   background-color: #000000;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+   margin: 0;
+ }
+ 
+ .form-container {
+   background-color: #ccc;
+   padding: 20px;
+   border-radius: 5px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   width: 600px;
+   text-align: center;
+ }
+ 
+ h1 {
+   text-align: center;
+   margin-bottom: 20px;
+   color: #3a86ff;
+   font-size: 50px;
+ }
+ 
+ .box {
+   width: 100%;
+   padding: 10px;
+   margin-bottom: 10px;
+   border: 1px solid #ccc;
+   color: aliceblue;
+   background-color: #000000;
+   border-radius: 5px;
+   font-size: 20px;
+ }
+ 
+ .btn {
+   background-color: #4361ee;
+   color: #fff;
+   padding: 10px;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   transition: background-color 0.3s;
+   width: 72vh;
+   font-size: 20px;
+ }
+ 
+ .btn:hover {
+   background-color: #3f37c9;
+ }
+ 
+ .message {
+   margin-top: 10px;
+   background-color: #f44336;
+   color: #fff;
+   font-size: 30px;
+   padding: 5px;
+   border-radius: 5px;
+   margin-bottom: 20px;
+ }
+ 
+ .id {
+   color: #85b4f9;
+   margin-top: 20px;
+   margin-bottom: 20px;
+   font-size: 30px;
+   cursor: default;
+ }
+ 
+ p {
+   font-size: 25px;
+ }
+ 
+ .link {
+   color: #0979a5;
+   text-decoration: none;
+ }
+ 
+ .link:hover {
+   color: #85b4f9;
+   text-decoration: none;
+ }
+ 
+ .wrapper {
+   position: absolute;
+   width: 558px;
+ }
+ 
+ span {
+   position: absolute;
+   right: 10px;
+   top: 25%;
+   cursor: pointer;
+ }
+ 
+ .fa {
+   font-size: 20px;
+   color: #7a797e;
+ }
+ 
+ /* Media Queries */
+ 
+ @media only screen and (max-width: 768px) {
+   .form-container {
+     width: 90%;
+     padding: 20px;
+   }
+   .box {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+   .btn {
+     width: 100%;
+   }
+   .wrapper {
+     width: 82%;
+   }
+   span {
+      right: 5px;
+      top: 20%;
+    }
+   p {
+      font-size: 20px;
+    }
+ }
+ 
+ @media only screen and (max-width: 480px) {
+   .form-container {
+     width: 100%;
+     padding: 10px;
+   }
+   .box {
+         padding: 5px;
+         margin-bottom: 5px;
+   }
+   .wrapper {
+      padding: 5px;
+      width: 50%;
+    }
+   .btn {
+     padding: 5px;
+   }
+   .message {
+     font-size: 20px;
+   }
+   .id {
+     font-size: 20px;
+   }
+   p {
+     font-size: 15px;
+   }
+   span {
+      right: 5px;
+      top: 15%;
+      font-size: 16px;
+    }
+ }

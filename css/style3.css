@@ -1,0 +1,346 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #000000;
+ 
+}
+h1 {
+  color: #5340ff;
+  text-align: center;
+  font-size: 50px;
+  margin-top: -10px;
+
+}
+h2{
+  margin-top: -80px;
+}
+h3{
+  color: #007bff;
+  font-size: 30px;
+  text-align: center;
+}
+footer {
+  background-color: #ccc;
+    color: #000000;
+    padding: 1em;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+footer a{
+  color: #007bff;
+  text-decoration: none;
+}
+footer a:hover{
+  color:#5340ff;
+
+}
+header {
+  background-color: #ccc;
+    color: #000000;
+    padding: 1em;
+    text-align: center;
+
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input[type="file"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+input[type="submit"] {
+  background-color: #4c70af;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#file-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  overflow: auto; /* or overflow: scroll; */
+  margin-bottom: 50px; /* adjust the value as needed */
+}
+
+#file-list li {
+  padding: 10px;
+  border-bottom: 1px solid #000000;
+}
+
+#file-list li a {
+  text-decoration: none;
+  color: #000000;
+}
+
+#file-list li a:hover {
+
+  color: #1f38f7;
+}
+
+#fileInput {
+  display: none;
+}
+#fileButton{
+  margin-left:60%;
+  background-color: #ccc;
+  border-style: none;
+
+}
+.fa-solid.fa-cloud-arrow-up {
+  font-size: 50px; /* increase the font size to make the icon bigger */
+  color: #007bff;
+  transition: color 0.2s ease;
+  transform: scale(1); /* add transform property */
+
+}
+.fa-solid.fa-cloud-arrow-up:hover {
+  color: #0069d9;
+  transform: scale(1.1); /* scale up on hover */
+  animation: hover-effect 0.5s ease-in-out infinite; /* add animation */
+}
+
+@keyframes hover-effect {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+#file-dialog:not([open]) {
+  display: none;
+}
+
+#file-dialog[open] .close {
+  position: absolute;
+  align-self: flex-end;
+  margin-left: 900px;
+  background-color: #453e3e;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#file-dialog[open] .close:hover {
+  background-color: red;
+}
+
+#file-dialog {
+  display: flex;
+  flex-direction: column;
+  width: 1000px; /* adjust the width as needed */
+  height: 696px; /* adjust the height as needed */
+  background-color: transparent; /* add this line */
+  border: none; /* add this line to remove the border */
+  box-shadow: none; /* add this line to remove the box shadow */
+}
+
+#file-preview {
+  flex-grow: 1;
+  width: 999px;
+  height: 690px;
+  border: none;
+  color: #000000;
+}
+.restricted-file {
+  color: red;
+  font-size: 24px;
+  font-weight: bold;
+}
+.hidden {
+  display: none;
+}
+/* Add this to your stylesheet */
+.modal {
+  position: fixed;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ccc;
+  border: 1px solid #888;
+  padding: 20px;
+  width: 200px; /* updated width */
+  height: auto; /* updated height */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.modal-content {
+  margin: 20px;
+
+}
+.closebtn{
+  position: absolute;
+  align-self: flex-end;
+  margin-left: 148px;
+  margin-top: -50px;
+  background-color: #453e3e;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.closebtn:hover {
+background-color: #ad1d00;
+}
+
+/* Add this to darken the background */
+.modal-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+/* Add this to center the modal */
+.modal-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+
+.logo {
+  width: 200px;
+  height: auto;
+  margin-top:-50px;
+}
+
+.tick {
+  background-color: #87CEEB; /* Light blue */
+  color: #fff;
+  border: none;
+  padding: 8px 16px; /* reduced padding */
+  font-size: 14px; /* reduced font size */
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.tick:hover {
+  background-color: #56B3FA; /* Darker blue */
+}
+
+.tick:active {
+  transform: translateY(2px);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.fa-trash {
+  color: red;
+  transition: color 0.3s;
+}
+
+.fa-trash:hover {
+  color: #ad1d00;
+}
+.fa-pencil{
+  color: #1e80b9;
+}
+.fa-pencil:hover {
+  color:#1f38f7;
+}
+.fa-up-down-left-right{
+  color:  #1e80b9;
+}
+.fa-up-down-left-right:hover {
+  color:#1f38f7;
+}
+.fa-share {
+  color:  #1e80b9;
+}
+.fa-share:hover {
+  color:#1f38f7;
+}
+.fa-download {
+  color:  #1e80b9;
+}
+
+.fa-download:hover {
+  color:#1f38f7;
+}
+.foldername{
+  cursor: pointer;
+  color: #000000;
+}
+.foldername:hover{
+  color:#1f38f7;
+
+}
+.fa-folder{
+  color: yellow;
+
+}
+.fa-folder:hover{
+  color:  rgb(238, 255, 46);
+
+}
+
+.fa-folder-plus{
+  color: yellow;
+  font-size: 50px;
+  margin-left: 20px;
+  position: relative;
+  top: -70px;
+  left: 30%;
+  transition: color 0.2s ease;
+  transform: scale(1); /* add transform property */
+
+}
+.fa-folder-plus:hover{
+  color:  rgb(238, 255, 46);
+  transform: scale(1.1); /* scale up on hover */
+  animation: hover-effect 0.5s ease-in-out infinite; /* add animation */
+}
+.fa-file{
+  color: #1e80b9;
+}
+.fa-file:hover{
+  color: #1f38f7;
+}
+.fa-solid {
+  cursor: pointer;
+}
+li{
+  font-size: 25px;
+  overflow: auto; /* or overflow: scroll; */
+  margin-bottom: 25px; /* adjust the value as needed */
+}
+.box{
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ccc;
+  border-radius: 8px;
+  overflow-y: auto;
+  max-height: 400px; /* Set a maximum height to trigger the scrollbar */
+
+}
